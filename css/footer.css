@@ -1,0 +1,17 @@
+.i_liens img {
+    /*filter: invert();*/
+    width: 50px;
+    padding: var(--padding);
+}
+
+.liens {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--social-color);
+    height: 100px;
+    align-items: center;
+}
+
+/*.i_liens:hover {
+    filter: invert();
+}*/

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+/*
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+ */
+
+@import 'header.css';
+@import 'banner.css';
+@import 'section.css';
+@import 'form.css';
+@import "footer.css";
+
+:root {
+    --text_content_size:25px;
+    --color_text: black;
+    --color-reverse: white;
+    --color_title: black;
+
+    --navbar-color: white;
+    --main-color: white;
+    --main-color_opacity: white;
+    --social-color: white;
+    --dark: white;
+    --light: white;
+    --form-color: white;
+
+    --skill-color: black;
+
+    --size_name: 50pt;
+    --size_title: 25pt;
+
+    --font_body: 'Montserrat', sans-serif;
+    --font_title: 'Raleway', sans-serif;;
+
+    --padding-sm: calc(var(--padding) / 2);
+    --padding: 16px;
+    --padding-lg: calc(var(--padding) * 2);
+
+    --margin-sm: calc(var(--margin) / 2);
+    --margin: 50px;
+    --margin-lg: calc(var(--margin) * 4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font_body);
+    color: var(--color_text);
+    font-size: 14pt;
+    margin: 0;
+    position: relative;
+}
+
+h1 {
+    font-family: var(--font_title);
+    /*color: var(--color_title);*/
+    font-size: var(--size_name);
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: var(--font_title);
+    color: var(--color_title);
+    font-size: var(--size_title);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--font_title);
+    color: var(--color_title);
+    font-size: 20pt;
+    text-transform: uppercase;
+    margin: 0;
+}

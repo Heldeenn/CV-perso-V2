@@ -1,0 +1,27 @@
+.navbar{
+    background: var(--navbar-color);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+}
+
+.liens_h {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.liens_h a {
+    text-decoration: none;
+    color: var(--color-reverse);
+}
+
+.liens_h a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.menu_burger {
+    display: none;
+}
