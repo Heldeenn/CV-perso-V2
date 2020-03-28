@@ -12,6 +12,7 @@
 @import 'header.css';
 @import 'banner.css';
 @import 'sectionSkills.css';
+@import "sectionExperiences.css";
 @import 'section.css';
 @import 'form.css';
 @import "footer.css";
@@ -86,4 +87,10 @@ h3 {
     font-size: 20pt;
     text-transform: uppercase;
     margin: 0;
+}
+
+.titles h2 {
+    margin-top: 100px;
+    margin-left: var(--margin-title);
+    margin-bottom: 10px;
 }

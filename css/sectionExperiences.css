@@ -1,0 +1,70 @@
+.boxListJob {
+    margin-left: var(--margin-section);
+    margin-right: var(--margin-section);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--margin) * 2);
+    justify-content: space-between;
+    line-height: 30px;
+}
+
+.boxWork {
+    background-color: tomato;
+    padding-top: 20px;
+    width: 600px;
+    border-radius: 40px;
+    height: 650px;
+    margin-bottom: var(--margin);
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.titleDate {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.titleDate h3 {
+    position: relative;
+    left: -50px;
+    width: 500px;
+    text-align: center;
+    background-color: burlywood;
+    height: 70px;
+    padding: 15px;
+    padding-right: 10px;
+}
+
+.titleDate p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.place {
+    margin-top: 130px;
+    background-color: burlywood;
+    width: 60%;
+    margin-left: var(--margin);
+    padding-left: var(--padding);
+    padding-top: 0.5pt;
+    padding-bottom: 0.5pt;
+}
+
+.details {
+    margin-left: var(--margin);
+}
+
+.details p {
+    margin-top: var(--margin);
+}
+
+.details ul {
+    padding: 0;
+    margin-top: var(--margin);
+}
+
+.details ul li {
+    list-style: none;
+}

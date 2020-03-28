@@ -201,8 +201,8 @@
             ]
         ],
         'Travail saisonnier' => [
-            '2009 - 2016',
-            '(Juillet - Août)',
+            '2009',
+            '2016',
             'TPC SCOP SA | Norbert Dentressangle | Carrefour Market | Société AFUME',
             'Région d\'Orléans',
             'Conditionnement, Manutention, Employée commerciale, Agent polyvalent',
@@ -218,20 +218,20 @@
             <h2>Expériences</h2>
         </div>
         <div class="lineSection"></div>
-        <div class="boxList">
+        <div class="boxListJob">
             <?php foreach ($jobs as $job => $details) : ?>
             <div class="boxWork">
                 <div class="titleDate">
                     <h3><?= $job ?></h3>
-                    <b><?= $details[0] ?>
+                    <p><?= $details[0] ?>
                         <br/>
-                       <?= $details[1] ?>
-                    </b>
+                        <?= $details[1] ?>
+                    </p>
                 </div>
                 <div class="place">
                     <p><?= $details[2] ?>
                         <br/>
-                        <?= $details[3] ?>
+                        <i><?= $details[3] ?></i>
                     </p>
                 </div>
                 <div class="details">
