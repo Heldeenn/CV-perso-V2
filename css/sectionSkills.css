@@ -1,0 +1,79 @@
+.titles h2 {
+    margin-top: 100px;
+    margin-left: var(--margin-title);
+    margin-bottom: 10px;
+}
+
+.lineSection {
+    width: 100%;
+    border-top: 4px solid black;
+}
+
+.boxList,
+.boxListLanguages {
+    margin-left: var(--margin-section);
+    margin-right: var(--margin-section);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--margin);
+}
+
+.boxList {
+    justify-content: space-between;
+}
+
+.boxListLanguages {
+    justify-content: center;
+}
+
+.titleLanguages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleLanguages h2 {
+    margin-bottom: 10px;
+}
+
+.lineLanguages {
+    border-top: 4px solid black;
+    width: 400px;
+    text-align: center;
+}
+
+.box {
+    width: 330px;
+    height: 150px;
+    background-color: burlywood;
+    margin: 20px;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skill img {
+    width: 64px;
+}
+
+.box ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.box ul li {
+    list-style: none;
+}
+
+.box ul li img {
+    width: 20px;
+}

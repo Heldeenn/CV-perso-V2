@@ -50,7 +50,7 @@
         7
     ],
     'Symphony' => [
-        'images/symfony.svg',
+        'images/symfony.png',
         6
     ],
     'HTML 5' => [
@@ -62,11 +62,11 @@
         8
     ],
     'GIT'=> [
-        'images/git.svg',
+        'images/git.png',
         6
     ],
     'MySQL' => [
-        'images/mysql.svg',
+        'images/mysql.png',
         5
         ],
     ]
@@ -75,30 +75,34 @@
     <?php
     $languages = [
         'Anglais' => [
-            'images/england.svg',
+            'images/english.svg',
             8
         ],
         'Japonais' => [
-            'images/japanese.svg',
+            'images/japan.svg',
             4
         ],
     ]
     ?>
 
     <section id="competences">
-        <h2>Compétences</h2>
+        <div class="titles">
+            <h2>Compétences</h2>
+        </div>
         <div class="lineSection"></div>
         <div class="boxList">
             <?php foreach ($skills as $skill => $detail) : ?>
             <div class="box">
-                <img src="<?= $detail[0]?>" alt="<?= $skill ?>">
-                <h3><?= $skill ?></h3>
+                <div class="skill">
+                    <img src="<?= $detail[0]?>" alt="<?= $skill ?>">
+                    <h3><?= $skill ?></h3>
+                </div>
                 <ul>
                     <?php for ($i = 1 ; $i <= $detail[1] ; $i++) : ?>
-                    <li class="pointDark"><img src="images/pointDark.jpg" alt="pointDark"></li>
+                    <li class="pointDark"><img src="images/point.png" alt="pointDark"></li>
                     <?php endfor; ?>
                     <?php for ($i = 1 ; $i <= (10 - $detail[1]) ; $i++) : ?>
-                        <li class="pointLight"><img src="images/pointLight.jpg" alt="pointLight"></li>
+                        <li class="pointLight"><img src="images/point.png" alt="pointLight"></li>
                     <?php endfor; ?>
                 </ul>
             </div>
@@ -110,17 +114,19 @@
             <div class="lineLanguages"></div>
         </div>
 
-        <div class="boxList">
+        <div class="boxListLanguages">
             <?php foreach ($languages as $language => $details) : ?>
             <div class="box">
-                <img src="<?= $details[0]?>" alt="<?= $language ?>">
-                <h3><?= $language ?></h3>
+                <div class="skill">
+                    <img src="<?= $details[0]?>" alt="<?= $language ?>">
+                    <h3><?= $language ?></h3>
+                </div>
                 <ul>
                     <?php for ($i = 1 ; $i <= $details[1] ; $i++) : ?>
-                        <li class="pointDark"><img src="images/pointDark.jpg" alt="pointDark"></li>
+                        <li class="pointDark"><img src="images/point.png" alt="pointDark"></li>
                     <?php endfor; ?>
                     <?php for ($i = 1 ; $i <= (10 - $details[1]) ; $i++) : ?>
-                        <li class="pointLight"><img src="images/pointLight.jpg" alt="pointLight"></li>
+                        <li class="pointLight"><img src="images/point.png" alt="pointLight"></li>
                     <?php endfor; ?>
                 </ul>
             </div>
@@ -208,7 +214,9 @@
     ?>
 
     <section id="experiences">
-        <h2>Expériences</h2>
+        <div class="titles">
+            <h2>Expériences</h2>
+        </div>
         <div class="lineSection"></div>
         <div class="boxList">
             <?php foreach ($jobs as $job => $details) : ?>
@@ -263,7 +271,9 @@
     ?>
 
     <section id="formation">
-        <h2>Formations</h2>
+        <div class="titles">
+            <h2>Formations</h2>
+        </div>
         <div class="lineSection"></div>
         <div class="boxList">
             <?php foreach ($studies as $study => $details) : ?>
@@ -296,7 +306,9 @@
     ?>
 
     <section class="hobbies">
-        <h2>Hobbies</h2>
+        <div class="titles">
+            <h2>Hobbies</h2>
+        </div>
         <div class="lineSection"></div>
         <div class="boxList">
             <?php foreach ($hobbies as $hobby => $details) : ?>
