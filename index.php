@@ -16,24 +16,24 @@
 
     <section id="banner">
         <div class="photo">
-            <img src="" alt="photo">
+            <img src="images/photo.jpeg" alt="photo">
         </div>
-        <div class="name">
+        <div class="nameTitle">
             <h1>Amandine HELENE</h1>
-            <h2>Développeuse Web
-            <br/>
-                PHP - Symphony
-            </h2>
-        </div>
-        <div class="mailPhone">
+            <div class="name">
+                <h2>Développeuse Web
+                <br/>
+                    PHP - Symphony
+                </h2>
+            </div>
             <p>amandine.ln7@gmail.com</p>
             <p>06.21.27.43.82</p>
         </div>
         <div class="socialNetwork">
             <div class="lineBanner"></div>
-            <img src="" alt="LinkedIn">
-            <img src="" alt="GitHub">
-            <img src="" alt="Twitter">
+            <img src="images/linkedin.png" alt="LinkedIn">
+            <img src="images/github.png" alt="GitHub">
+            <img src="images/twitter.png" alt="Twitter">
         </div>
         <div class="about">
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
