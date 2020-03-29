@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <div class="liens_h">
+    <div class="liens_h" id="liens_h">
         <a href="#banner">A propos de moi</a>
         <a href="#competences">Compétences</a>
         <a href="#experiences">Expériences</a>

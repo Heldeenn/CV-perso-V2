@@ -1,6 +1,7 @@
 @media screen and (max-width: 1740px) {
     .boxList,
-    .boxListJob {
+    .boxListJob,
+    .boxListLanguages {
         margin-right: var(--margin);
         margin-left: var(--margin);
     }
@@ -67,8 +68,195 @@
 @media screen and (max-width: 1000px) {
     .photo img,
     .nameTitle h1,
-    .nameTitle p,
     .name h2 {
         position: static;
     }
+
+    .titles h2 {
+        margin-left: var(--margin);
+    }
+
+    .nameTitle h1 {
+        font-size: 36pt;
+        text-align: center;
+    }
+
+    .name h2 {
+        text-align: center;
+    }
+
+    .nameTitle p {
+        display: none;
+    }
+
+    .photo,
+    .nameTitle {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialNetwork {
+        margin: 0;
+        margin-top: 20px;
+        justify-content: space-around;
+    }
+
+    .nameTitle p {
+        align-self: flex-start;
+    }
+
+    .lineResponsive {
+        display: flex;
+        justify-content: center;
+        height: 5px;
+    }
+    .lineBannerResponsive {
+        width: 80%;
+        border-bottom: 5px solid var(--navbar-color);
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .addressResponsive {
+        display: flex;
+        flex-direction: column;
+        font-size: 16pt;
+    }
+
+    .addressResponsive p {
+        margin-bottom: 0;
+    }
+
+    .about {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .photo img {
+        width: 300px;
+    }
+
+    .nameTitle h1 {
+        font-size: 28pt;
+        margin-top: var(--margin-sm);
+    }
+
+    .name h2 {
+        font-size: 18pt;
+    }
+
+    .about p {
+        font-size: 12pt;
+    }
+
+    .box ul li img {
+        width: 15px;
+    }
+
+    .titles h2,
+    .titleLanguages h2 {
+        font-size: 22pt;
+    }
+
+    .boxListJob,
+    .boxList,
+    .boxListLanguages{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 20px;
+    }
+
+    .boxWork {
+        height: 750px;
+    }
+
+    .titleDate,
+    .titleDate p,
+    .titleDate h3 {
+        position: static;
+    }
+
+    .titleDate {
+        flex-direction: column-reverse;
+    }
+
+    .titleDate p {
+        margin-top: 0;
+    }
+
+    .titleDate h3 {
+        font-size: 14pt;
+        width: 200px;
+    }
+
+    .place {
+        margin-top: 26px;
+    }
+
+    .place p {
+        margin: 10px;
+        font-size: 12pt;
+    }
+
+    .details p {
+        font-size: 12pt;
+        margin-top: 26px;
+        line-height: 25px;
+    }
+
+    .details ul {
+        margin-top: 26px;
+    }
+
+    .details ul li {
+        line-height: 25px;
+        font-size: 10pt;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .send {
+        font-size: 10pt;
+        padding: 4px 8px;
+    }
+
+    .navbar {
+        height: 40px;
+    }
+
+    .liens_h {
+        display: none;
+    }
+
+/* --------------MENU BURGER --------------*/
+    .liens_h {
+        display: none;
+    }
+
+    .liens_h:target {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: var(--navbar-color);
+        color: var(--text-light);
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: larger;
+    }
+
+    .menu_burger {
+        display: block;
+        text-decoration: none;
+        color: var(--text-light);
+        font-size: 20pt;
+        margin-left: 10px;
+        margin-top: 4px;
+    }
+
 }

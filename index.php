@@ -29,11 +29,18 @@
             <p>amandine.ln7@gmail.com</p>
             <p>06.21.27.43.82</p>
         </div>
+        <div class="lineResponsive">
+            <div class="lineBannerResponsive"></div>
+        </div>
         <div class="socialNetwork">
             <div class="lineBanner"></div>
-            <img src="images/linkedin.png" alt="LinkedIn">
-            <img src="images/github.png" alt="GitHub">
-            <img src="images/twitter.png" alt="Twitter">
+            <a href=""><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href=""><img src="images/github.png" alt="GitHub"></a>
+            <a href=""><img src="images/twitter.png" alt="Twitter"></a>
+        </div>
+        <div class="addressResponsive">
+            <p>amandine.ln7@gmail.com</p>
+            <p>06.21.27.43.82</p>
         </div>
         <div class="about">
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
