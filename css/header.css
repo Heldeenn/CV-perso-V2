@@ -8,6 +8,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 3;
+    border-bottom: 4px solid var(--text-light);
 }
 
 .liens_h {
@@ -19,7 +20,7 @@ header {
 
 .liens_h a {
     text-decoration: none;
-    color: black;
+    color: var(--text-light);
 }
 
 .liens_h a:hover {

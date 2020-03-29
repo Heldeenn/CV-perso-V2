@@ -44,8 +44,7 @@
 
     <div class="formulaire">
         <div class="hire">
-            <p>Vous avez besoin de plus d'informations ?</p>
-            <p>Contactez-moi !</p>
+            <img src="images/uenoPark.jpeg" alt="Ueno Park">
         </div>
         <form action="" method="post">
             <label for="name">Prénom et nom</label>

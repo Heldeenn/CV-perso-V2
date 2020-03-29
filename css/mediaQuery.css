@@ -1,9 +1,74 @@
+@media screen and (max-width: 1740px) {
+    .boxList,
+    .boxListJob {
+        margin-right: var(--margin);
+        margin-left: var(--margin);
+    }
+}
+
 @media screen and (max-width: 1550px) {
     #banner {
         margin-left: var(--margin);
         margin-right: var(--margin);
     }
+
+    .hire img {
+        width: 600px;
+    }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1330px) {
+    .hire img {
+        width: 400px;
+    }
+
+    .nameTitle p {
+        font-size: 14pt;
+        top: -85px;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .nameTitle h1 {
+        width: 65%;
+    }
+
+    .nameTitle p {
+        top: 15px;
+
+    }
+
+    .lineBanner {
+        display: none;
+    }
+
+    .socialNetwork {
+        justify-content: center;
+        margin-left: 300px;
+    }
+
+    .about {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .hire {
+        display: none;
+    }
+
+    .formulaire {
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .photo img,
+    .nameTitle h1,
+    .nameTitle p,
+    .name h2 {
+        position: static;
+    }
 }

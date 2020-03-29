@@ -51,15 +51,15 @@
     ],
     'Symphony' => [
         'images/symfony.png',
-        6
+        5
     ],
     'HTML 5' => [
         'images/html.svg',
-        8
+        7
     ],
     'CSS 3' => [
         'images/css.svg',
-        8
+        7
     ],
     'GIT'=> [
         'images/git.png',
@@ -235,7 +235,7 @@
                     </p>
                 </div>
                 <div class="details">
-                    <p><?= $details[4] ?></p>
+                    <p><b><?= $details[4] ?></b></p>
                     <ul>
                         <?php foreach ($details[5] as $skill) : ?>
                         <li><?= $skill ?></li>
@@ -250,7 +250,7 @@
     <?php
     $studies = [
         'Développeur Web et mobile' => [
-            '2020 (5 mois)',
+            '2020',
             'Wild Code School',
             'Orléans',
             'Formation PHP'
@@ -280,16 +280,16 @@
                 <div class="boxWork">
                     <div class="titleDate">
                         <h3><?= $study ?></h3>
-                        <b><?= $details[0] ?></b>
+                        <p><?= $details[0] ?></p>
                     </div>
                     <div class="place">
                         <p><?= $details[1] ?>
                             <br/>
-                            <?= $details[2] ?>
+                            <i><?= $details[2] ?></i>
                         </p>
                     </div>
                     <div class="details">
-                        <p><?= $details[3] ?></p>
+                        <p><b><?= $details[3] ?></b></p>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -299,13 +299,14 @@
     <?php
     $hobbies = [
         'Voyages' => ['images/osaka.jpg', 'Japan'],
-        'Montage vidéo (Adobe premiere pro 2019)' => ['images/montage.jpg', 'Adobe premiere pro'],
-        'Jeux vidéos (jeux de construction et stratégie)' => ['images/videogame.jpg', 'Cities Skylines'],
-        'Jeux de société' => ['images/jeux.jpg', 'Jeux de société']
+        'Montage vidéo (Adobe premiere pro 19)' => ['images/montage.PNG', 'Adobe premiere pro'],
+        'Jeux vidéos (construction / stratégie)' => ['images/citiesSkylines.jpg', 'Cities Skylines'],
+        'Jeux de société' => ['images/jeux.png', 'Jeux de société'],
+        'Cinéma' => ['images/cinema.jpg', 'Cinema']
     ]
     ?>
 
-    <section class="hobbies">
+    <section id="hobbies">
         <div class="titles">
             <h2>Hobbies</h2>
         </div>

@@ -12,8 +12,8 @@
 @import 'header.css';
 @import 'banner.css';
 @import 'sectionSkills.css';
-@import "sectionExperiences.css";
-@import 'section.css';
+@import "sectionXpFormations.css";
+@import 'sectionHobbies.css';
 @import 'form.css';
 @import "footer.css";
 @import "mediaQuery.css";
@@ -22,16 +22,16 @@
     --text_content_size:25px;
 
     --color_text: black;
-    --color-reverse: white;
     --color_title: black;
 
-    --navbar-color: blue;
-    --main-color: white;
-    --main-color_opacity: white;
-    --social-color: white;
-    --dark: white;
-    --light: white;
-    --form-color: white;
+    --navbar-color: #42313A;
+
+    --background-dark: #66535b;
+    --background-light: burlywood;
+    --text-dark: #42323A;
+    --text-light: #DDBC95;
+
+    --form-color: #42313A;
 
     --skill-color: black;
 
@@ -90,7 +90,7 @@ h3 {
 }
 
 .titles h2 {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: var(--margin-title);
     margin-bottom: 10px;
 }

@@ -19,7 +19,7 @@
 }
 
 .boxList {
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .boxListLanguages {
@@ -76,4 +76,8 @@
 
 .box ul li img {
     width: 20px;
+}
+
+.pointLight img {
+    filter: invert();
 }
