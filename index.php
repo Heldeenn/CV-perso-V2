@@ -6,12 +6,22 @@
     <title>Amandine HELENE</title>
 </head>
 
+<?php include 'mail.php'; ?>
+
 <body>
 
     <header>
-        <?php
-        include 'navbar.php';
-        ?>
+        <nav class="navbar">
+            <div class="liens_h" id="liens_h">
+                <a href="#banner">A propos de moi</a>
+                <a href="#competences">Compétences</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#formation">Formations</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a class="menu_burger" href="#liens_h">☰</a>
+        </nav>
     </header>
 
     <section id="banner">
@@ -74,7 +84,7 @@
     ],
     'MySQL' => [
         'images/mysql.png',
-        5
+        4
         ],
     ]
     ?>
@@ -328,9 +338,11 @@
         </div>
     </section>
 
+    <section id="contact">
     <?php
-    require 'form.php';
+    include 'form.php';
     ?>
+    </section>
 
     <footer>
         <?php
