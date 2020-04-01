@@ -65,7 +65,7 @@
     </section>
 
     <?php
-    $query = 'SELECT * FROM skill';
+    $query = 'SELECT * FROM skill ORDER BY `order`';
     $statement = $pdo->query($query);
     $skills = $statement->fetchAll(PDO::FETCH_ASSOC);
 
