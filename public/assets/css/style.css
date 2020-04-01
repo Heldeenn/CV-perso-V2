@@ -17,6 +17,7 @@
 @import 'form.css';
 @import "footer.css";
 @import "mediaQuery.css";
+@import "admin.css";
 
 :root {
     --text_content_size:25px;

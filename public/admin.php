@@ -5,12 +5,18 @@ require '../src/database.php';
 $query = 'SELECT * FROM skill ORDER BY `order`';
 $statement = $pdo->query($query);
 $skills = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-include 'skill.php';
-foreach ($skills as $skill) : ?>
+?>
+<h4>Skills list</h4>
+<?php
+include 'skill.php';?>
+<h4>Update or delete a skill</h4>
+<div class="adminButton">
+<?php foreach ($skills as $skill) : ?>
     <a href="update.php?id=<?= $skill['id']?>"><button type="submit">Edit <?=$skill['name']?></button></a>
-<?php endforeach;
+<?php endforeach; ?>
+</div>
 
+<?php
 //form create
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors= [];
@@ -52,22 +58,22 @@ foreach ($skills as $skill) : ?>
     <?php if (!empty($errors)) { ?>
     <div class="error">
         <ul>
-                <?php foreach ($errors as $error) : ?>
-                    <li><?= $error ?></li>
-                <?php endforeach;
+            <?php foreach ($errors as $error) : ?>
+                <li><?= $error ?></li>
+            <?php endforeach;
             }?>
         </ul>
     </div>
-    <h3>Add a skill</h3>
-    <div class="formulaire">
+    <h4>Add a skill</h4>
+    <div class="adminForm">
         <form action="" method="post">
             <label for="name">Name</label>
-            <input class="input-form" id="name" type="text" name="name" value="<?= $data['name'] ?? ''?>">
+            <input class="adminInput" id="name" type="text" name="name" value="<?= $data['name'] ?? ''?>">
             <label for="image">Image</label>
-            <input class="input-form" id="image" type="text" name="image" value="<?= $data['image'] ?? ''?>">
+            <input class="adminInput" id="image" type="text" name="image" value="<?= $data['image'] ?? ''?>">
             <label for="rating">Rating</label>
-            <input class="input-form" id="rating" type="text" name="rating" value="<?= $data['rating'] ?? ''?>">
-            <button class="send" type="submit">Envoyer</button>
+            <input class="adminInput" id="rating" type="text" name="rating" value="<?= $data['rating'] ?? ''?>">
+            <button class="adminSend" type="submit">Create</button>
         </form>
     </div>
     </body>

@@ -56,21 +56,21 @@ $skills = $statement->fetch(PDO::FETCH_ASSOC);
             }?>
         </ul>
     </div>
-    <h3>Update a skill</h3>
-    <div class="formulaire">
+    <h4>Update a skill</h4>
+    <div class="adminForm">
         <form action="" method="post">
             <label for="name">Name</label>
-            <input class="input-form" id="name" type="text" name="name" value="<?= $data['name'] ?? $skills['name'] ?? ''?>">
+            <input class="adminInput" id="name" type="text" name="name" value="<?= $data['name'] ?? $skills['name'] ?? ''?>">
             <label for="image">Image</label>
-            <input class="input-form" id="image" type="text" name="image" value="<?= $data['image'] ?? $skills['image'] ?? ''?>">
+            <input class="adminInput" id="image" type="text" name="image" value="<?= $data['image'] ?? $skills['image'] ?? ''?>">
             <label for="rating">Rating</label>
-            <input class="input-form" id="rating" type="text" name="rating" value="<?= $data['rating'] ?? $skills['rating'] ?? ''?>">
-            <button class="send" type="submit">Envoyer</button>
+            <input class="adminInput" id="rating" type="text" name="rating" value="<?= $data['rating'] ?? $skills['rating'] ?? ''?>">
+            <button class="adminSend" type="submit">Update</button>
         </form>
     </div>
-    <div>
-        <a href="delete.php?id=<?=$skills['id']?>">Delete</a>
-        <a href="admin.php">Return</a>
+    <div class="adminReturn">
+        <a class="deleteLink" href="delete.php?id=<?=$skills['id']?>">Delete</a>
+        <a class="returnLink" href="admin.php">Return</a>
     </div>
     </body>
 </html>
