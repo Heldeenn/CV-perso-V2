@@ -88,9 +88,3 @@ h3 {
     text-transform: uppercase;
     margin: 0;
 }
-
-.titles h2 {
-    margin-top: 80px;
-    margin-left: var(--margin-title);
-    margin-bottom: 10px;
-}

@@ -1,8 +1,12 @@
+<?php
+    require '../src/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Amandine HELENE</title>
 </head>
 
@@ -26,7 +30,7 @@
 
     <section id="banner">
         <div class="photo">
-            <img src="images/photo.jpeg" alt="photo">
+            <img src="assets/images/photo.jpeg" alt="photo">
         </div>
         <div class="nameTitle">
             <h1>Amandine HELENE</h1>
@@ -44,9 +48,9 @@
         </div>
         <div class="socialNetwork">
             <div class="lineBanner"></div>
-            <a href=""><img src="images/linkedin.png" alt="LinkedIn"></a>
-            <a href=""><img src="images/github.png" alt="GitHub"></a>
-            <a href=""><img src="images/twitter.png" alt="Twitter"></a>
+            <a href=""><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+            <a href=""><img src="assets/images/github.png" alt="GitHub"></a>
+            <a href=""><img src="assets/images/twitter.png" alt="Twitter"></a>
         </div>
         <div class="addressResponsive">
             <p>amandine.ln7@gmail.com</p>
@@ -61,44 +65,24 @@
     </section>
 
     <?php
-    $skills = [
-    'PHP 7' => [
-        'images/php.svg',
-        7
-    ],
-    'Symphony' => [
-        'images/symfony.png',
-        5
-    ],
-    'HTML 5' => [
-        'images/html.svg',
-        7
-    ],
-    'CSS 3' => [
-        'images/css.svg',
-        7
-    ],
-    'GIT'=> [
-        'images/git.png',
-        6
-    ],
-    'MySQL' => [
-        'images/mysql.png',
-        4
-        ],
-    ]
+    $query = 'SELECT * FROM skill';
+    $statement = $pdo->query($query);
+    $skills = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+//    $skills = [
+//        ['name' => 'PHP 7', 'image' => 'php.svg', 'rating' => 7],
+//        ['name' => 'Symphony', 'image' => 'symfony.png', 'rating' => 5],
+//        ['name' => 'HTML 5', 'image' => 'html.svg', 'rating' => 7],
+//        ['name' => 'CSS 3', 'image' => 'css.svg', 'rating' => 7],
+//        ['name' => 'GIT', 'image' => 'git.png', 'rating' => 6],
+//        ['name' => 'MySQL', 'image' => 'mysql.png', 'rating' => 4],
+//    ]
     ?>
 
     <?php
     $languages = [
-        'Anglais' => [
-            'images/english.svg',
-            8
-        ],
-        'Japonais' => [
-            'images/japan.svg',
-            4
-        ],
+        ['name' => 'Anglais', 'image' => 'english.svg', 'rating' => 8],
+        ['name' => 'Japonais', 'image' => 'japan.svg', 'rating' => 4],
     ]
     ?>
 
@@ -107,48 +91,20 @@
             <h2>Compétences</h2>
         </div>
         <div class="lineSection"></div>
-        <div class="boxList">
-            <?php foreach ($skills as $skill => $detail) : ?>
-            <div class="box">
-                <div class="skill">
-                    <img src="<?= $detail[0]?>" alt="<?= $skill ?>">
-                    <h3><?= $skill ?></h3>
-                </div>
-                <ul>
-                    <?php for ($i = 1 ; $i <= $detail[1] ; $i++) : ?>
-                    <li class="pointDark"><img src="images/point.png" alt="pointDark"></li>
-                    <?php endfor; ?>
-                    <?php for ($i = 1 ; $i <= (10 - $detail[1]) ; $i++) : ?>
-                        <li class="pointLight"><img src="images/point.png" alt="pointLight"></li>
-                    <?php endfor; ?>
-                </ul>
-            </div>
-            <?php endforeach; ?>
-        </div>
+
+        <?php
+        include 'skill.php';
+        ?>
 
         <div class="titleLanguages">
             <h2>Langues</h2>
             <div class="lineLanguages"></div>
         </div>
 
-        <div class="boxListLanguages">
-            <?php foreach ($languages as $language => $details) : ?>
-            <div class="box">
-                <div class="skill">
-                    <img src="<?= $details[0]?>" alt="<?= $language ?>">
-                    <h3><?= $language ?></h3>
-                </div>
-                <ul>
-                    <?php for ($i = 1 ; $i <= $details[1] ; $i++) : ?>
-                        <li class="pointDark"><img src="images/point.png" alt="pointDark"></li>
-                    <?php endfor; ?>
-                    <?php for ($i = 1 ; $i <= (10 - $details[1]) ; $i++) : ?>
-                        <li class="pointLight"><img src="images/point.png" alt="pointLight"></li>
-                    <?php endfor; ?>
-                </ul>
-            </div>
-            <?php endforeach; ?>
-        </div>
+        <?php
+        include 'language.php';
+        ?>
+
     </section>
 
     <?php
@@ -315,11 +271,11 @@
 
     <?php
     $hobbies = [
-        'Voyages' => ['images/osaka.jpg', 'Japan'],
-        'Montage vidéo (Adobe premiere pro 19)' => ['images/montage.PNG', 'Adobe premiere pro'],
-        'Jeux vidéos (construction / stratégie)' => ['images/citiesSkylines.jpg', 'Cities Skylines'],
-        'Jeux de société' => ['images/jeux.png', 'Jeux de société'],
-        'Cinéma' => ['images/cinema.jpg', 'Cinema']
+        'Voyages' => ['assets/images/osaka.jpg', 'Japan'],
+        'Montage vidéo (Adobe premiere pro 19)' => ['assets/images/montage.PNG', 'Adobe premiere pro'],
+        'Jeux vidéos (construction / stratégie)' => ['assets/images/citiesSkylines.jpg', 'Cities Skylines'],
+        'Jeux de société' => ['assets/images/jeux.png', 'Jeux de société'],
+        'Cinéma' => ['assets/images/cinema.jpg', 'Cinema']
     ]
     ?>
 

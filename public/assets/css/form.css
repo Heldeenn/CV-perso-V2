@@ -74,10 +74,10 @@ textarea {
     background-color: #decaad;
 }
 
-/* ----------------- ERRORS ------------------ */
+/* ----------------- ERRORS/SUCCESS ------------------ */
 
-.error {
-    background-color: #ff3a50;
+.error,
+.success {
     color: var(--text-light);
     border-radius: 4px;
     list-style: none;
@@ -85,4 +85,13 @@ textarea {
     width: 550px;
     align-self: flex-end;
     margin-right: var(--margin-lg);
+    margin-top: 10px;
+}
+
+.error {
+    background-color: #ff3a50;
+}
+
+.success {
+    background-color: #3c9e31;
 }

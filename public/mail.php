@@ -5,27 +5,27 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data[$key] = trim($value);
     }
     if (empty($data['name'])) {
-        $errors[] = "Le champ 'Nom et prenom' est vide";
+        $errors[] = "Veuillez renseigner votre prénom et nom";
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $data['name'])) {
         $errors[] = "Seules les lettres et espaces sont autorisées pour le prénom et nom";
     }
 
     if (empty($data['email'])) {
-        $errors[] = "Le champ 'Courriel' est vide";
+        $errors[] = "Veuillez renseigner votre email";
     } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Le format du courriel est invalide';
+        $errors[] = 'Le format de l\'email est invalide';
     }
 
     if (empty($data['phone'])) {
-        $errors[] = "Le champ 'Numéro de téléphone' est vide";
+        $errors[] = "Veuillez renseigner votre numéro de téléphone";
     }
 
     if (empty($data['message'])) {
-        $errors[] = "Le champ 'Message' est vide";
+        $errors[] = "N'avez-vous rien à me dire ?";
     }
 }
 
 if (empty($errors) && !empty($_POST)) {
-    header('Location: index.php?message=Message envoyé#contact');
+    header('Location: index.php?message=Bravo ! Votre message a bien été envoyé#contact');
     exit();
 }
