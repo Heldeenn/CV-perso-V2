@@ -57,10 +57,11 @@
             <p>06.21.27.43.82</p>
         </div>
         <div class="about">
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Mon parcours professionnel m'a permis d'acquérir des compétences transférables dans de nombreux domaines.
+                Je m'adapte facilement, j'aime découvrir et explorer de nouvelles choses.
+                Je souhaiterais approfondir mes compétences acquises durant ma formation à la Wild Code School
+                et en développer de nouvelles grâce à de nouveaux défis.<br/>
+                <b>Je suis activement à la recherche d'un stage à partir du 3 août 2020 pour une durée de 4 mois.</b></p>
         </div>
     </section>
 
@@ -69,17 +70,6 @@
     $statement = $pdo->query($query);
     $skills = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-//    $skills = [
-//        ['name' => 'PHP 7', 'image' => 'php.svg', 'rating' => 7],
-//        ['name' => 'Symphony', 'image' => 'symfony.png', 'rating' => 5],
-//        ['name' => 'HTML 5', 'image' => 'html.svg', 'rating' => 7],
-//        ['name' => 'CSS 3', 'image' => 'css.svg', 'rating' => 7],
-//        ['name' => 'GIT', 'image' => 'git.png', 'rating' => 6],
-//        ['name' => 'MySQL', 'image' => 'mysql.png', 'rating' => 4],
-//    ]
-    ?>
-
-    <?php
     $languages = [
         ['name' => 'Anglais', 'image' => 'english.svg', 'rating' => 8],
         ['name' => 'Japonais', 'image' => 'japan.svg', 'rating' => 4],
@@ -108,6 +98,77 @@
     </section>
 
     <?php
+
+    //------boucle pour récup compétences : manque array_push
+
+//    $query = "SELECT * FROM experience, competence WHERE experience.id = competence.idJob";
+//    $statement = $pdo->query($query);
+//    $jobs = $statement->fetchAll(PDO::FETCH_ASSOC);
+//    $tempId = 0;
+//    $arrayJob = [];
+//    foreach ($jobs as $job) {
+//        if ($job['idJob'] != $tempId) {
+//            $arrayJob = [
+//                $job['job'] => [
+//                    'date1' => $job['dateStart'],
+//                    'date2' => $job['dateEnd'],
+//                    'entreprise' => $job['company'],
+//                    'location' => $job['place'],
+//                    'details' => $job['description'],
+//                    'comp' => [
+//                        $job['skill']
+//                    ]
+//                ]
+//            ];
+//        } elseif ($job['idJob'] == $tempId) {
+//            array_push($arrayJob[$job['job']]['comp'], $job['skill']);
+//        }
+//        $tempId = $job['idJob'];
+//    }
+//
+//    var_dump($arrayJob);
+
+
+    // ------------------ANCIEN TABLEAU---------------------------------
+//    $jobs = [
+//        [
+//            'id' => 1,
+//            'job' => 'Assistante technique de production',
+//            'dateStart' => 2018,
+//            'dateEnd' => 2019,
+//            'company' => 'TPC SCOP Saran',
+//            'place' => 'Saran',
+//            'description' => 'Gestion des données et des documents nécessaires à la production, du démarrage jusqu\'à la clôture de la commande.'
+//        ]
+//    ];
+//    $skillJobs = [
+//        [
+//            'skill' => 'Anticiper et prioriser',
+//            'id' => 1
+//        ],
+//        [
+//            'skill' => 'Expliquer et transmettre un dossier de production',
+//            'id' => 1
+//        ],
+//        [
+//            'skill' => 'Analyser et synthétiser des informations',
+//            'id' => 1
+//        ],
+//        [
+//            'skill' => 'Coordonner plusieurs projets',
+//            'id' => 1
+//        ],
+//        [
+//            'skill' => 'Analyser la demande et les besoins du client',
+//            'id' => 1
+//        ],
+//        [
+//            'skill' => 'Travailler en équipe',
+//            'id' => 1
+//        ]
+//    ]
+
+//---------------ANCIEN TABLEAU-----------------
     $jobs = [
         'Assistante technique de production' => [
             '2018',
@@ -183,7 +244,7 @@
                 'Autonomie financière',
             ]
         ]
-    ]
+        ]
     ?>
 
     <section id="experiences">
@@ -191,33 +252,9 @@
             <h2>Expériences</h2>
         </div>
         <div class="lineSection"></div>
-        <div class="boxListJob">
-            <?php foreach ($jobs as $job => $details) : ?>
-            <div class="boxWork">
-                <div class="titleDate">
-                    <h3><?= $job ?></h3>
-                    <p><?= $details[0] ?>
-                        <br/>
-                        <?= $details[1] ?>
-                    </p>
-                </div>
-                <div class="place">
-                    <p><?= $details[2] ?>
-                        <br/>
-                        <i><?= $details[3] ?></i>
-                    </p>
-                </div>
-                <div class="details">
-                    <p><b><?= $details[4] ?></b></p>
-                    <ul>
-                        <?php foreach ($details[5] as $skill) : ?>
-                        <li><?= $skill ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
+        <?php
+            include 'experience.php';
+        ?>
     </section>
 
     <?php
