@@ -1,0 +1,84 @@
+h4 {
+    text-align: center;
+    margin-top: var(--margin);
+    font-size: var(--size_title);
+    margin-bottom: var(--margin-sm);
+}
+
+/*--------FORM----------*/
+.adminForm {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--navbar-color);
+    color: var(--text-light);
+}
+
+.adminInput, textarea {
+    background-color: transparent;
+    color: var(--text-light);
+    font-family: var(--font_body);
+}
+
+.adminInput {
+    border: 1px solid black;
+    padding: var(--padding-sm);
+}
+
+textarea {
+    border: 1px solid black;
+    padding: var(--padding-sm);
+}
+
+.adminSend,
+.adminButton button {
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: var(--margin-sm);
+    border: none;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.adminSend:hover,
+.adminButton button:hover {
+    background-color: #decaad;
+}
+
+.adminButton {
+    display: flex;
+    justify-content: center;
+}
+
+.adminButton button {
+    border: 1px solid var(--navbar-color);
+    margin-right: var(--margin);
+}
+
+/*----------RETURN/DELETE LINKS----------*/
+.adminReturn {
+    margin-top: var(--margin);
+    text-align: center;
+}
+
+.adminReturn a {
+    margin-right: var(--margin);
+    text-decoration: none;
+    font-size: 25pt;
+}
+
+.returnLink {
+    color: #3c9e31;
+}
+
+.deleteLink {
+    color: #ff3a50;
+}
+
+.adminReturn a:hover {
+    font-weight: bold;
+}

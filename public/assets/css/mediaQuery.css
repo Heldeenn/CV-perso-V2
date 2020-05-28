@@ -27,6 +27,12 @@
         font-size: 14pt;
         top: -85px;
     }
+
+    .error,
+    .success {
+        margin-right: 130px;
+    }
+
 }
 
 @media screen and (max-width: 1330px) {
@@ -73,16 +79,17 @@
     }
 
     .titles h2 {
-        margin-left: var(--margin);
+        margin-left: var(--margin-lg);
     }
 
     .nameTitle h1 {
-        font-size: 36pt;
+        font-size: 34pt;
         text-align: center;
     }
 
     .name h2 {
         text-align: center;
+        font-size: 28pt;
     }
 
     .nameTitle p {
@@ -113,7 +120,7 @@
         height: 5px;
     }
     .lineBannerResponsive {
-        width: 80%;
+        width: 100%;
         border-bottom: 5px solid var(--navbar-color);
         align-self: center;
         margin-top: 10px;
@@ -144,8 +151,13 @@
         margin-top: var(--margin-sm);
     }
 
+    .name {
+        width: 100%;
+    }
+
     .name h2 {
         font-size: 18pt;
+        width: 100%;
     }
 
     .about p {
@@ -156,9 +168,23 @@
         width: 15px;
     }
 
+    .titles {
+        width: 100%;
+    }
+
+    .titles h2 {
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 30%;
+    }
+
     .titles h2,
     .titleLanguages h2 {
         font-size: 22pt;
+    }
+
+    .lineLanguages {
+        width: 100%;
     }
 
     .boxListJob,
@@ -233,6 +259,24 @@
         display: none;
     }
 
+/*-----------HOBBIES ---------------*/
+    figcaption {
+        display: block;
+        color: var(--navbar-color);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    figure:hover figcaption {
+        position: static;
+        display: block;
+        height: auto;
+        width: auto;
+        background-color: initial;
+        color: var(--navbar-color);
+        text-align: center;
+    }
+
 /* --------------MENU BURGER --------------*/
     .liens_h {
         display: none;
@@ -257,6 +301,14 @@
         font-size: 20pt;
         margin-left: 10px;
         margin-top: 4px;
+        width: 50%;
     }
 
+/*--------ERROR/SUCCESS---------*/
+    .error,
+    .success {
+        width: 300px;
+        align-self: flex-end;
+        margin: 10px;
+    }
 }

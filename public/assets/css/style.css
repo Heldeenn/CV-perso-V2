@@ -17,6 +17,7 @@
 @import 'form.css';
 @import "footer.css";
 @import "mediaQuery.css";
+@import "admin.css";
 
 :root {
     --text_content_size:25px;
@@ -87,10 +88,4 @@ h3 {
     font-size: 20pt;
     text-transform: uppercase;
     margin: 0;
-}
-
-.titles h2 {
-    margin-top: 80px;
-    margin-left: var(--margin-title);
-    margin-bottom: 10px;
 }
